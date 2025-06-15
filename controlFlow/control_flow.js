@@ -48,3 +48,25 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let dietRole = "Mother";
+let dietCategory;
+
+switch (dietRole)
+{
+    case "Employee":
+        dietCategory = "You have access to Dietary Services";
+        break;
+    case "Enrolled Member":
+        dietCategory = "You have access to Dietary Services and one-on-one interaction with a dietician";
+        break;
+    case "Subscriber":
+        dietCategory = "You have partial access to faciliate Dietary Services only.";
+        break;
+    default:
+        dietCategory = "You must enroll or at least subscribe first to avail this facility.";
+        break;
+}
+
+console.log("You are a(n)", dietRole);
+console.log(dietCategory);
